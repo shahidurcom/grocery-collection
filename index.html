@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Grocery Packages | Fresh & Fast</title>
+    <meta name="description" content="Buy premium Thai grocery packages online. PromptPay accepted. Fast delivery.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Thai Grocery Shop",
+      "url": "https://example.com",
+      "priceRange": "৳৳",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TH"
+      }
+    }
+    </script>
+</head>
+
+<body class="min-h-screen p-4 md:p-8 flex items-center justify-center">
+
+    <div class="glass-panel w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10">
+
+        <!-- Header -->
+        <header class="gradient-header text-white p-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 relative z-10 tracking-tight">Grocery Packages</h1>
+            <p class="text-green-100 relative z-10 font-light">Select your preferred size and essentials</p>
+        </header>
+
+        <!-- Toastify CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+        <!-- Product Table Container -->
+        <div class="overflow-x-auto mt-6">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-50/80 text-gray-500 uppercase text-xs tracking-wider">
+                        <th class="p-4 w-16 text-center">Select</th>
+                        <th class="p-4">Product Details</th>
+                        <th class="p-4 text-center">Quantity Option</th>
+                        <th class="p-4 text-right">Price</th>
+                    </tr>
+                </thead>
+                <tbody id="productList" class="divide-y divide-gray-50 bg-white">
+                    <!-- Javascript Responds Here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div
+            class="p-6 bg-gray-50 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <button onclick="selectAll()"
+                class="text-sm font-semibold text-gray-500 hover:text-green-700 transition-colors flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Select All
+            </button>
+
+            <div class="flex items-center gap-6">
+                <div class="text-right">
+                    <p class="text-xs text-gray-400 uppercase font-bold">Total Amount</p>
+                    <div class="text-2xl font-bold text-green-700">৳<span id="total">0</span></div>
+                </div>
+
+                <button onclick="addToCart()"
+                    class="btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center gap-2">
+                    <span>🛒</span> Checkout
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

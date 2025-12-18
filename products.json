@@ -1,0 +1,230 @@
+[
+    {
+        "id": 1,
+        "name": "মরিচ গুঁড়া (Chili Powder)",
+        "image": "https://images.pexels.com/photos/33440711/pexels-photo-33440711.jpeg",
+        "options": [
+            {
+                "label": "250g",
+                "price": 200
+            },
+            {
+                "label": "500g",
+                "price": 345
+            },
+            {
+                "label": "1kg",
+                "price": 650
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "সরিষা তেল (Mustard Oil)",
+        "image": "https://images.unsplash.com/photo-1610547939489-73202bc6afda?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "options": [
+            {
+                "label": "500ml",
+                "price": 450
+            },
+            {
+                "label": "1L",
+                "price": 850
+            },
+            {
+                "label": "5L",
+                "price": 1650
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "ডাল (Lentils)",
+        "image": "https://images.pexels.com/photos/8108209/pexels-photo-8108209.jpeg",
+        "options": [
+            {
+                "label": "500g",
+                "price": 120
+            },
+            {
+                "label": "1kg",
+                "price": 250
+            },
+            {
+                "label": "2kg",
+                "price": 420
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "হলুদ গুঁড়া (Turmeric)",
+        "image": "https://images.pexels.com/photos/7988019/pexels-photo-7988019.jpeg",
+        "options": [
+            {
+                "label": "200g",
+                "price": 90
+            },
+            {
+                "label": "400g",
+                "price": 145
+            },
+            {
+                "label": "1kg",
+                "price": 220
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "ধনিয়া গুঁড়া (Coriander)",
+        "image": "https://images.pexels.com/photos/7263626/pexels-photo-7263626.jpeg",
+        "options": [
+            {
+                "label": "200g",
+                "price": 80
+            },
+            {
+                "label": "400g",
+                "price": 125
+            },
+            {
+                "label": "1kg",
+                "price": 200
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "জিরা গুঁড়া (Cumin Powder)",
+        "image": "https://images.pexels.com/photos/4871244/pexels-photo-4871244.jpeg",
+        "options": [
+            {
+                "label": "100g",
+                "price": 150
+            },
+            {
+                "label": "250g",
+                "price": 350
+            },
+            {
+                "label": "500g",
+                "price": 650
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "লবণ (Salt)",
+        "image": "https://images.pexels.com/photos/2320244/pexels-photo-2320244.jpeg",
+        "options": [
+            {
+                "label": "1kg",
+                "price": 35
+            },
+            {
+                "label": "2kg",
+                "price": 65
+            },
+            {
+                "label": "5kg",
+                "price": 150
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "চিনি (Sugar)",
+        "image": "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "options": [
+            {
+                "label": "1kg",
+                "price": 130
+            },
+            {
+                "label": "2kg",
+                "price": 250
+            },
+            {
+                "label": "5kg",
+                "price": 600
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "আটা (Flour)",
+        "image": "https://images.pexels.com/photos/5765/flour-powder-wheat-jar.jpg",
+        "options": [
+            {
+                "label": "1kg",
+                "price": 55
+            },
+            {
+                "label": "2kg",
+                "price": 100
+            },
+            {
+                "label": "5kg",
+                "price": 240
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "সুজি (Semolina)",
+        "image": "https://plus.unsplash.com/premium_photo-1701205951994-169d1eb819ce?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "options": [
+            {
+                "label": "250g",
+                "price": 40
+            },
+            {
+                "label": "500g",
+                "price": 75
+            },
+            {
+                "label": "1kg",
+                "price": 140
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "পোলাও চাল (Polao Rice)",
+        "image": "https://images.pexels.com/photos/34467094/pexels-photo-34467094.jpeg",
+        "options": [
+            {
+                "label": "1kg",
+                "price": 160
+            },
+            {
+                "label": "2kg",
+                "price": 310
+            },
+            {
+                "label": "5kg",
+                "price": 750
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "সয়াবিন তেল (Soybean Oil)",
+        "image": "https://images.unsplash.com/photo-1640958903174-936043ea7c17?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "options": [
+            {
+                "label": "1L",
+                "price": 190
+            },
+            {
+                "label": "2L",
+                "price": 370
+            },
+            {
+                "label": "5L",
+                "price": 900
+            }
+        ]
+    }
+]

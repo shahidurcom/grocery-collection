@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Thai Grocery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Placeholder
+        })();
+    </script>
+</head>
+
+<body class="min-h-screen p-4 flex items-center justify-center">
+
+    <div class="glass-panel w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10">
+
+        <header class="gradient-header text-white p-6 text-center relative overflow-hidden">
+            <h1 class="text-2xl font-bold relative z-10">Delivery Details</h1>
+            <p class="text-green-100 relative z-10 text-sm">Please provide your info to complete the order</p>
+        </header>
+
+        <div class="p-8 bg-white">
+            <form id="checkout-form" onsubmit="submitOrder(event)" class="flex flex-col gap-4">
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="customer_name" required
+                        class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                        placeholder="John Doe">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="customer_email" required
+                        class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                        placeholder="john@example.com">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="customer_phone" required
+                        class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                        placeholder="081 234 5678">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Delivery Address</label>
+                    <textarea id="customer_address" required rows="3"
+                        class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                        placeholder="Your full delivery address..."></textarea>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-gray-600">Total Amount</span>
+                        <span class="text-xl font-bold text-green-700">৳<span id="checkout-total">0</span></span>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-full btn-transition bg-green-700 hover:bg-green-800 text-white py-3 rounded-xl font-bold shadow-lg shadow-green-700/30 flex items-center justify-center gap-2">
+                        <span>🚀</span> Send Order Request
+                    </button>
+
+                    <a href="summary.html" class="block text-center mt-4 text-sm text-gray-500 hover:text-gray-700">
+                        ← Back to Summary
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center relative overflow-hidden">
+            <!-- decorative background -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-green-600"></div>
+
+            <div
+                class="w-16 h-16 bg-green-100/50 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl animate-bounce">
+                🎉
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Order Received!</h2>
+            <p class="text-gray-500 mb-6 text-sm leading-relaxed">
+                Thank you, <span id="modal-customer-name" class="font-semibold text-green-700"></span>.<br>
+                We have received your order details via email. We will contact you shortly to confirm delivery.
+            </p>
+
+            <button onclick="window.location.href='index.html'"
+                class="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold btn-transition shadow-lg shadow-green-600/20">
+                Back to Home
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

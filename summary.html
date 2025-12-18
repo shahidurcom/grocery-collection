@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary | Checkout</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen p-4 flex items-center justify-center">
+
+    <div class="glass-panel w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden animate-fade-in">
+
+        <header class="bg-gray-800 text-white p-5 flex items-center justify-between">
+            <h2 class="text-xl font-bold flex items-center gap-2">
+                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                </a>
+                Order Summary
+            </h2>
+            <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Review items</span>
+        </header>
+
+        <div class="p-6">
+            <!-- Cart Items Container -->
+            <div id="summary"
+                class="bg-white rounded-xl shadow-sm border border-gray-100 divide-y divide-gray-100 mb-6">
+                <!-- Javascript injects items here -->
+            </div>
+
+            <!-- Total Section -->
+            <div class="flex justify-between items-end p-4 bg-green-50 rounded-xl border border-green-100">
+                <div>
+                    <p class="text-sm text-green-800 font-medium">Total to Pay</p>
+                    <p class="text-xs text-green-600 mt-1">Includes all taxes</p>
+                </div>
+                <div class="text-3xl font-bold text-green-700">৳<span id="summary-total">0</span></div>
+            </div>
+
+            <button onclick="proceedToCheckout()"
+                class="w-full mt-6 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center gap-2 justify-center">
+                <span>🚚</span> Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

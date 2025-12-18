@@ -1,0 +1,2 @@
+second prompt: remove the package system of (small/medium/large) instead you will use tab for the quantity values in each product for the corresponding quantity of the product price will dynamicaly change. you will centrally manage a json file for product details. There I will be able to update product specifications that will render to the website at @index.html . Another thing is that Each customer will be required to select at least 10 items at a time to order and proceed further. Use modern toast to show any type of alerts. Fine ture the design of this entire project.
+

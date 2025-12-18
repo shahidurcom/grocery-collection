@@ -10,21 +10,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="min-h-screen p-4 flex items-center justify-center">
+<body class="min-h-screen p-4 flex flex-col items-center justify-center">
 
     <div class="glass-panel w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden animate-fade-in">
 
-        <header class="bg-gray-800 text-white p-5 flex items-center justify-between">
-            <h2 class="text-xl font-bold flex items-center gap-2">
-                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+        <header class="gradient-header text-white p-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+            <div class="relative z-10 flex items-center justify-between">
+                <a href="index.html" class="text-white/80 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
                 </a>
-                Order Summary
-            </h2>
-            <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Review items</span>
+                <div>
+                    <h1 class="text-2xl font-bold">Order Summary</h1>
+                    <p class="text-green-100 text-sm">Review your selected items from SyloTea</p>
+                </div>
+                <div class="w-6"></div> <!-- Spacer for center alignment -->
+            </div>
         </header>
 
         <div class="p-6">
@@ -50,6 +55,10 @@
         </div>
 
     </div>
+
+    <footer class="mt-8 text-center text-gray-500 text-sm font-medium pb-8">
+        <p>&copy; 2025 SyloTea, All Right Reserved.</p>
+    </footer>
 
     <script type="module" src="js/script.js"></script>
 </body>

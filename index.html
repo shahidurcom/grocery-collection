@@ -67,26 +67,28 @@
 
         <!-- Footer -->
         <div
-            class="p-6 bg-gray-50 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+            class="p-4 sm:p-6 bg-gray-50 border-t border-gray-100 grid grid-cols-2 gap-4 items-center sm:flex sm:justify-between">
+
+            <!-- Select All (Mobile: Top Left, Desktop: Left) -->
             <button onclick="selectAll()"
-                class="text-sm font-semibold text-gray-500 hover:text-green-700 transition-colors flex items-center gap-1">
+                class="justify-self-start text-sm font-medium text-gray-500 hover:text-green-700 bg-gray-100 hover:bg-green-50 px-3 py-2 rounded-lg transition-colors flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 Select All
             </button>
 
-            <div class="flex items-center gap-6">
-                <div class="text-right">
-                    <p class="text-xs text-gray-400 uppercase font-bold">Total Amount</p>
-                    <div class="text-2xl font-bold text-green-700">৳<span id="total">0</span></div>
-                </div>
-
-                <button onclick="addToCart()"
-                    class="btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center gap-2">
-                    <span>🛒</span> Checkout
-                </button>
+            <!-- Total Amount (Mobile: Top Right, Desktop: Right with Checkout) -->
+            <div class="justify-self-end text-right sm:order-2 sm:mr-6">
+                <p class="text-xs text-gray-400 uppercase font-bold">Total Amount</p>
+                <div class="text-2xl font-bold text-green-700">৳<span id="total">0</span></div>
             </div>
+
+            <!-- Checkout Button (Mobile: Bottom Full Width, Desktop: Right) -->
+            <button onclick="addToCart()"
+                class="col-span-2 w-full sm:col-span-1 sm:w-auto sm:order-3 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2">
+                <span>🛒</span> Checkout
+            </button>
 
         </div>
 

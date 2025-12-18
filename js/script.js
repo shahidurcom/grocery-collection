@@ -233,15 +233,15 @@ function initSummary() {
         const details = item.pkg === "Standard" ? item.qty : `${item.qty} • ${item.pkg}`;
         
         return `
-        <div class="flex justify-between items-center p-4 border-b border-gray-100 last:border-0 hover:bg-gray-50">
-            <div class="flex items-center gap-4">
-                <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 gap-3 sm:gap-0">
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+                <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover flex-shrink-0">
                 <div>
-                    <h3 class="font-medium text-gray-800">${item.name}</h3>
+                    <h3 class="font-medium text-gray-800 text-sm sm:text-base">${item.name}</h3>
                     <p class="text-xs text-gray-500 uppercase tracking-wider">📦 ${details}</p>
                 </div>
             </div>
-            <div class="font-bold text-gray-800">৳${item.price}</div>
+            <div class="font-bold text-gray-800 self-end sm:self-auto text-lg sm:text-base">৳${item.price.toLocaleString()}</div>
         </div>
         `;
     }).join("");

@@ -2,15 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thai Grocery Packages | Fresh & Fast</title>
-    <meta name="description" content="Buy premium Thai grocery packages online. PromptPay accepted. Fast delivery.">
+    <meta charset="utf-8">
+    <title>Thai Grocery Packages | SyloTea - Fresh & Fast</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SyloTea, Grocery, Thai, Packages" name="keywords">
+    <meta content="SyloTea offers the rich tradition of Sylhet's premium tea and Thai grocery packages."
+        name="description">
 
-    <!-- Tailwind CSS -->
+    <!-- SyloTea Meta Tags -->
+    <meta property="og:title" content="Thai Grocery Packages | SyloTea">
+    <meta property="og:description"
+        content="SyloTea offers the rich tradition of Sylhet's premium tea leaves, handpicked for exceptional quality and taste. Experience nature's finest in every sip.">
+    <meta property="og:image" content="img/tea-image.png">
+    <meta property="og:url" content="https://www.sylotea.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- SyloTea Stylesheet -->
+    <link href="css/sylo-style.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (No Preflight) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
 
-    <!-- Custom CSS -->
+    <!-- Grocery Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- SEO Schema -->
@@ -18,8 +57,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Store",
-      "name": "Thai Grocery Shop",
-      "url": "https://example.com",
+      "name": "SyloTea Grocery",
+      "url": "https://www.sylotea.com",
       "priceRange": "৳৳",
       "address": {
         "@type": "PostalAddress",
@@ -29,75 +68,218 @@
     </script>
 </head>
 
-<body class="min-h-screen p-4 md:p-8 flex flex-col items-center justify-center">
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
 
-    <div class="glass-panel w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10">
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="img/logo.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Shop</a>
+                            <div class="dropdown-menu bg-light rounded-0 m-0">
+                                <a href="tea.html" class="dropdown-item">🍵 Tea</a>
+                                <a href="spices.html" class="dropdown-item">🌿 Spices</a>
+                                <a href="nuts-and-others.html" class="dropdown-item">🥜 Nuts & Seeds</a>
+                                <a href="oil.html" class="dropdown-item">🫒 Oil</a>
+                                <a href="honey.html" class="dropdown-item">🍯 Honey</a>
+                                <a href="sugar-and-jaggery.html" class="dropdown-item">🍚 Sugar & Jaggery</a>
+                                <a href="ghee.html" class="dropdown-item">🧈 Ghee</a>
+                                <a href="dates.html" class="dropdown-item">🌴 Dates</a>
+                                <a href="rice.html" class="dropdown-item">🍚 Rice</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="border-start ps-4 d-none d-lg-block">
+                        <a href="https://wa.me/message/2JOFIELTGEQYK1">Order <i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
 
-        <!-- Header -->
-        <header class="gradient-header text-white p-8 text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
-            </div>
-            <div class="relative z-10">
-                <h2 class="text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Welcome to</h2>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight">SyloTea</h1>
-                <p class="text-green-50 font-light text-lg">Premium Grocery Packages | Fresh & Fast</p>
-                <div class="w-16 h-1 bg-green-400 mx-auto mt-4 rounded-full opacity-70"></div>
-            </div>
-        </header>
+    <!-- Main Content Wrapper -->
+    <div class="bg-gray-50 flex flex-col items-center justify-center p-4 md:p-8" style="min-height: 80vh;">
 
         <!-- Toastify CSS -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-        <!-- Product Table Container -->
-        <div class="overflow-x-auto mt-6">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="bg-gray-50/80 text-gray-500 uppercase text-xs tracking-wider">
-                        <th class="p-4 w-16 text-center">Select</th>
-                        <th class="p-4">Product Details</th>
-                        <th class="p-4 text-center">Quantity Option</th>
-                        <th class="p-4 text-right">Price</th>
-                    </tr>
-                </thead>
-                <tbody id="productList" class="divide-y divide-gray-50 bg-white">
-                    <!-- Javascript Responds Here -->
-                </tbody>
-            </table>
-        </div>
+        <!-- Grocery App Component -->
+        <div class="glass-panel w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10">
+            <!-- Header -->
+            <header class="gradient-header text-white p-8 text-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Welcome to</h2>
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight">SyloTea</h1>
+                    <p class="text-green-50 font-light text-lg">Premium Grocery Packages | Fresh & Fast</p>
+                    <div class="w-16 h-1 bg-green-400 mx-auto mt-4 rounded-full opacity-70"></div>
+                </div>
+            </header>
 
-        <!-- Footer -->
-        <div
-            class="p-4 sm:p-6 bg-gray-50 border-t border-gray-100 grid grid-cols-2 gap-4 items-center sm:flex sm:justify-between">
+            <!-- Product Table Container -->
+            <!-- Product List Container (Div based for responsiveness) -->
+            <div class="mt-6 mx-3 md:mx-8 mb-6 bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                <!-- Header (Hidden on Mobile, Visible on Desktop) -->
+                <div
+                    class="hidden md:grid grid-cols-12 gap-4 bg-gray-50/80 p-4 text-gray-500 uppercase text-xs tracking-wider font-medium border-b border-gray-200">
+                    <div class="col-span-1 text-center">Select</div>
+                    <div class="col-span-5">Product Details</div>
+                    <div class="col-span-4 text-center">Quantity Option</div>
+                    <div class="col-span-2 text-right">Price</div>
+                </div>
 
-            <!-- Select All (Mobile: Top Left, Desktop: Left) -->
-            <button onclick="selectAll()"
-                class="justify-self-start text-sm font-medium text-gray-500 hover:text-green-700 bg-gray-100 hover:bg-green-50 px-3 py-2 rounded-lg transition-colors flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                Select All
-            </button>
-
-            <!-- Total Amount (Mobile: Top Right, Desktop: Right with Checkout) -->
-            <div class="justify-self-end text-right sm:order-2 sm:mr-6">
-                <p class="text-xs text-gray-400 uppercase font-bold">Total Amount</p>
-                <div class="text-2xl font-bold text-green-700">৳<span id="total">0</span></div>
+                <!-- List Items -->
+                <div id="productList" class="divide-y divide-gray-100">
+                    <!-- Loading Skeleton -->
+                    <div class="p-4 animate-pulse flex flex-wrap md:grid md:grid-cols-12 gap-4 items-center">
+                        <div class="md:col-span-1 flex justify-center">
+                            <div class="h-5 w-5 bg-gray-200 rounded"></div>
+                        </div>
+                        <div class="flex-1 md:col-span-5 flex items-center gap-3">
+                            <div class="h-12 w-12 bg-gray-200 rounded-lg"></div>
+                            <div class="h-4 bg-gray-200 rounded w-24"></div>
+                        </div>
+                        <div class="w-20 md:w-auto md:col-span-2 md:order-last ml-auto">
+                            <div class="h-6 bg-gray-200 rounded"></div>
+                        </div>
+                        <div class="w-full md:w-auto md:col-span-4 mt-2 md:mt-0 flex gap-2 justify-center">
+                            <div class="h-8 w-16 bg-gray-200 rounded"></div>
+                            <div class="h-8 w-16 bg-gray-200 rounded"></div>
+                            <div class="h-8 w-16 bg-gray-200 rounded"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Checkout Button (Mobile: Bottom Full Width, Desktop: Right) -->
-            <button onclick="addToCart()"
-                class="col-span-2 w-full sm:col-span-1 sm:w-auto sm:order-3 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2">
-                <span>🛒</span> Checkout
-            </button>
+            <!-- Grocery App Footer (Checkout Control) -->
+            <div
+                class="p-4 sm:p-6 bg-gray-50 border-t border-gray-100 grid grid-cols-2 gap-4 items-center sm:flex sm:justify-between">
+
+                <!-- Select All -->
+                <button onclick="selectAll()"
+                    class="justify-self-start text-sm font-medium text-gray-500 hover:text-green-700 bg-gray-100 hover:bg-green-50 px-3 py-2 rounded-lg transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Select All
+                </button>
+
+                <!-- Total Amount -->
+                <div class="justify-self-end text-right sm:order-2 sm:mr-6">
+                    <p class="text-xs text-gray-400 uppercase font-bold">Total Amount</p>
+                    <div class="text-2xl font-bold text-green-700">৳<span id="total">0</span></div>
+                </div>
+
+                <!-- Checkout Button -->
+                <button onclick="addToCart()"
+                    class="col-span-2 w-full sm:col-span-1 sm:w-auto sm:order-3 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2">
+                    <span>🛒</span> Checkout
+                </button>
+
+            </div>
 
         </div>
 
     </div>
 
-    <footer class="mt-8 text-center text-gray-500 text-sm font-medium pb-8">
-        <p>&copy; <span id="year"></span> SyloTea, All Right Reserved.</p>
-    </footer>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Osmani Nagar, Sylhet 3100.</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i><a
+                            href="https://wa.me/message/2JOFIELTGEQYK1">+880 1322-012822</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@sylotea.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://x.com/SyloTea"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.facebook.com/syloteacom/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.youtube.com/@SyloTea"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.linkedin.com/company/sylotea"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Our Services</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                    <a class="btn btn-link" href="#">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Business Hours</h4>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2025 <a class="fw-medium" href="#">SyloTea</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Site By <a class="fw-medium" href="https://digitalwaybusiness.com">Digital Way Business Ltd.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- SyloTea Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Grocery Javascript -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="js/script.js"></script>
 </body>

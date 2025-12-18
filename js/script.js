@@ -5,14 +5,17 @@ let cart = [];
 
 // --- EmailJS Initialization ---
 (function() {
-    // Only init if we are in a browser environment that supports it
-    // Using try-catch to avoid crashing if env vars are missing during dev
     try {
-        if (typeof emailjs !== 'undefined' && import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
-            emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+        const env = import.meta.env || {};
+        const publicKey = env.VITE_EMAILJS_PUBLIC_KEY;
+        
+        if (typeof emailjs !== 'undefined' && publicKey && publicKey !== 'YOUR_PUBLIC_KEY_HERE') {
+            emailjs.init(publicKey);
+        } else {
+             console.log("EmailJS skipped: Missing or placeholder Public Key");
         }
     } catch (e) {
-        console.warn("EmailJS not initialized or env vars missing");
+        console.warn("EmailJS initialization failed:", e);
     }
 })();
 
@@ -25,8 +28,8 @@ const summaryEl = document.getElementById("summary");
 
 async function fetchProducts() {
     try {
-        const response = await fetch('products.json');
-        if (!response.ok) throw new Error('Failed to load products');
+        const response = await fetch('./products.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         products = await response.json();
         
         // Initialize state
@@ -39,9 +42,12 @@ async function fetchProducts() {
 
         renderProducts();
     } catch (error) {
-        console.error(error);
+        console.error("Fetch error:", error);
         if (productListEl) {
-            productListEl.innerHTML = `<tr><td colspan="4" class="p-8 text-center text-red-500">Failed to load products. Please try again later.</td></tr>`;
+            productListEl.innerHTML = `<div class="p-8 text-center text-red-500">
+                Failed to load products.<br>
+                <span class="text-xs text-gray-500">${error.message}</span>
+            </div>`;
         }
     }
 }
@@ -66,30 +72,40 @@ function renderProducts() {
         }).join("");
 
         return `
-        <tr class="hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0">
-            <td class="p-4 text-center">
-                <label class="flex items-center justify-center cursor-pointer">
+        <div class="p-4 hover:bg-gray-50 transition-colors flex flex-wrap md:grid md:grid-cols-12 gap-y-3 md:gap-4 items-center group">
+            
+            <!-- Checkbox -->
+            <div class="w-auto mr-3 md:w-full md:mr-0 md:col-span-1 flex justify-center">
+                <label class="cursor-pointer relative flex items-center justify-center p-2 rounded-full hover:bg-gray-100 transition-colors">
                     <input type="checkbox" 
-                           class="w-5 h-5 text-green-600 rounded border-gray-300 focus:ring-green-500 transition-all"
+                           class="w-5 h-5 text-green-600 rounded border-gray-300 focus:ring-green-500 transition-all cursor-pointer"
                            ${isChecked}
                            onchange="toggleProduct(${product.id}, this.checked)">
                 </label>
-            </td>
-            <td class="p-4">
-                <div class="flex items-center gap-3">
-                    <img src="${product.image}" alt="${product.name}" class="w-12 h-12 rounded-lg shadow-sm object-cover bg-white">
-                    <span class="font-medium text-gray-800 text-sm sm:text-base">${product.name}</span>
+            </div>
+
+            <!-- Product Details -->
+            <div class="flex-1 flex items-center gap-3 md:col-span-5">
+                <div class="relative">
+                    <img src="${product.image}" alt="${product.name}" class="w-12 h-12 md:w-14 md:h-14 rounded-lg shadow-sm object-cover bg-white border border-gray-100 group-hover:scale-105 transition-transform duration-300">
                 </div>
-            </td>
-            <td class="p-4">
-                <div class="flex flex-wrap justify-center gap-2">
-                    ${tabsHtml}
+                <div class="flex flex-col">
+                    <span class="font-bold text-gray-800 text-sm sm:text-base leading-tight">${product.name}</span>
+                    <span class="md:hidden text-xs text-green-600 font-medium mt-0.5">Top Quality</span>
                 </div>
-            </td>
-            <td class="p-4 text-right font-bold text-green-700">
-                ৳${currentOption.price}
-            </td>
-        </tr>
+            </div>
+
+            <!-- Price (Mobile: Right side, Desktop: Col 2 Right) -->
+            <div class="md:col-span-2 md:order-last text-right ml-auto md:ml-0">
+                <div class="font-bold text-green-700 text-base md:text-lg">৳${currentOption.price}</div>
+            </div>
+
+            <!-- Quantity Tabs (Mobile: Bottom Full Width, Desktop: Col 4) -->
+            <div class="w-full mt-2 md:mt-0 md:w-auto md:col-span-4 flex flex-wrap justify-center gap-2 order-last md:order-none">
+                ${tabsHtml}
+            </div>
+
+        </div>
         `;
     }).join("");
 
@@ -377,11 +393,13 @@ function submitOrder(event) {
     };
 
     // 2. Send via EmailJS
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const env = import.meta.env || {};
+    const serviceID = env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = env.VITE_EMAILJS_TEMPLATE_ID;
 
-    if (!serviceID || !templateID) {
-         showToast("Configuration Error: Missing Environment Variables.", "error");
+    if (!serviceID || !templateID || serviceID === 'YOUR_SERVICE_ID_HERE') {
+         showToast("Configuration Error: Please check VITE_EMAILJS Keys in your .env file", "error");
+         console.error("Missing/Placeholder Keys:", { serviceID, templateID });
          submitBtn.disabled = false;
          submitBtn.innerHTML = originalText;
          return;

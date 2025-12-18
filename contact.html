@@ -3,62 +3,71 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Checkout | SyloTea</title>
+    <title>Contact | SyloTea - Taste The Tradition</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- SyloTea Favicon & Fonts -->
+    <!-- Meta Description -->
+    <meta name="description"
+        content="SyloTea offers the rich tradition of Sylhet's premium tea leaves, handpicked for exceptional quality and taste. Experience nature's finest in every sip.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords"
+        content="SyloTea, Sylhet tea, premium tea, handpicked tea, traditional tea, organic tea, tea leaves, tea quality, tea taste">
+
+    <!-- Meta Author -->
+    <meta name="author" content="SyloTea">
+
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Home | SyloTea - Taste The Tradition">
+    <meta property="og:description"
+        content="SyloTea offers the rich tradition of Sylhet's premium tea leaves, handpicked for exceptional quality and taste. Experience nature's finest in every sip.">
+    <meta property="og:image" content="https://www.sylotea.com/img/tea-image.png">
+    <meta property="og:url" content="https://www.sylotea.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home | SyloTea - Taste The Tradition">
+    <meta name="twitter:description"
+        content="SyloTea offers the rich tradition of Sylhet's premium tea leaves, handpicked for exceptional quality and taste. Experience nature's finest in every sip.">
+    <meta name="twitter:image" content="https://www.sylotea.com/img/tea-image.png">
+
+    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/sylo-style.css" rel="stylesheet">
 
-    <!-- Tailwind CSS (No Preflight) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            corePlugins: {
-                preflight: false,
-            }
-        }
-    </script>
-
-    <!-- Grocery Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Toastify CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-            (function () {
-                // Check if init is needed here or if script.js handles it. 
-                // script.js handles it BUT script.js uses import.meta.env which won't work in plain script tag here.
-                // However, script.js handles initialization internally if loaded as module.
-                // But this inline script was here in original checkout.html with "YOUR_PUBLIC_KEY".
-                // Since script.js initializes it, we might not need this inline init if relying on .env
-                // But let's keep it safe. If script.js runs, it runs.
-                // Original file had: emailjs.init("YOUR_PUBLIC_KEY");
-                // If the user hasn't set keys, script.js won't work either.
-                // I'll leave the SDK here.
-            })();
-    </script>
+    <!-- SyloTea Stylesheet -->
+    <link href="css/sylo-style.css" rel="stylesheet">>
 </head>
 
 <body>
-    <!-- Spinner -->
+    <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
+    <!-- Spinner End -->
 
-    <!-- Navbar -->
+
+    <!-- Navbar Start -->
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
@@ -75,7 +84,7 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Shop</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
                             <div class="dropdown-menu bg-light rounded-0 m-0">
                                 <a href="tea.html" class="dropdown-item">🍵 Tea</a>
                                 <a href="spices.html" class="dropdown-item">🌿 Spices</a>
@@ -96,99 +105,53 @@
             </nav>
         </div>
     </div>
+    <!-- Navbar End -->
 
-    <!-- Main Content Wrapper -->
-    <div class="bg-gray-50 flex flex-col items-center justify-center p-4 md:p-8" style="min-height: 80vh;">
 
-        <div class="glass-panel w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10">
-
-            <header class="gradient-header text-white p-6 text-center relative overflow-hidden">
-                <div
-                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
-                </div>
-                <h1 class="text-2xl font-bold relative z-10">SyloTea Checkout</h1>
-                <p class="text-green-100 relative z-10 text-sm">Secure Delivery Details</p>
-            </header>
-
-            <div class="p-8 bg-white">
-                <form id="checkout-form" onsubmit="submitOrder(event)" class="flex flex-col gap-4">
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" id="customer_name" required
-                            class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                            placeholder="John Doe">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                        <input type="email" id="customer_email" required
-                            class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                            placeholder="john@example.com">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input type="tel" id="customer_phone" required
-                            class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                            placeholder="081 234 5678">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Delivery Address</label>
-                        <textarea id="customer_address" required rows="3"
-                            class="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green-500 outline-none transition-all"
-                            placeholder="Your full delivery address..."></textarea>
-                    </div>
-
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="text-gray-600">Total Amount</span>
-                            <span class="text-xl font-bold text-green-700">৳<span id="checkout-total">0</span></span>
-                        </div>
-
-                        <button type="submit" id="submit-btn"
-                            class="w-full btn-transition bg-green-700 hover:bg-green-800 text-white py-3 rounded-xl font-bold shadow-lg shadow-green-700/30 flex items-center justify-center gap-2">
-                            <span>🚀</span> Send Order Request
-                        </button>
-
-                        <a href="summary.html" class="block text-center mt-4 text-sm text-gray-500 hover:text-gray-700">
-                            ← Back to Summary
-                        </a>
-                    </div>
-                </form>
-            </div>
-
+    <label for="name">Your Name</label>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-floating">
+            <input type="email" class="form-control" id="email" placeholder="Your Email">
+            <label for="email">Your Email</label>
         </div>
     </div>
-
-    <!-- Success Modal -->
-    <div id="success-modal"
-        class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 transition-opacity duration-300">
-        <div
-            class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4 transform scale-95 transition-transform duration-300 text-center relative overflow-hidden">
-            <!-- decorative background -->
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-green-600"></div>
-
-            <div
-                class="w-16 h-16 bg-green-100/50 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl animate-bounce">
-                🎉
-            </div>
-
-            <h2 class="text-2xl font-bold text-gray-800 mb-2">Order Received!</h2>
-            <p class="text-gray-500 mb-6 text-sm leading-relaxed">
-                Thank you, <span id="modal-customer-name" class="font-semibold text-green-700"></span>.<br>
-                We have received your order details via email. We will contact you shortly to confirm delivery.
-            </p>
-
-            <button onclick="window.location.href='index.html'"
-                class="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold btn-transition shadow-lg shadow-green-600/20">
-                Back to Home
-            </button>
+    <div class="col-12">
+        <div class="form-floating">
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+            <label for="subject">Subject</label>
         </div>
     </div>
+    <div class="col-12">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a message here" id="message"
+                style="height: 120px"></textarea>
+            <label for="message">Message</label>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+    </div>
+    </div>
+    </form>
+    </div>
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="h-100">
+            <iframe class="w-100 rounded"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28993.820414219783!2d91.72890877989838!3d24.719066993368358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375105e3828d7d41%3A0xbf8b9f3f656e3cd5!2sOsmaninagar!5e0!3m2!1sen!2sbd!4v1741222860144!5m2!1sen!2sbd"
+                frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen=""
+                aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Contact End -->
 
-    <!-- Footer -->
+
+
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -217,6 +180,7 @@
                     <a class="btn btn-link" href="#">Terms & Condition</a>
                     <a class="btn btn-link" href="#">Support</a>
                 </div>
+
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary mb-4">Business Hours</h4>
                     <p class="mb-1">Monday - Friday</p>
@@ -229,7 +193,10 @@
             </div>
         </div>
     </div>
+    <!-- Footer End -->
 
+
+    <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
         <div class="container">
             <div class="row">
@@ -242,21 +209,24 @@
             </div>
         </div>
     </div>
+    <!-- Copyright End -->
 
+
+    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-    <!-- Scripts -->
+
+    <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script type="module" src="js/script.js"></script>
+    <!-- SyloTea Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

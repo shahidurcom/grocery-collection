@@ -438,6 +438,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("qr-code")) {
         initPayment();
     }
+    
+    // Dynamic Year
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });
 
 // --- Expose for Inline HTML Handlers (Module Scope Fix) ---

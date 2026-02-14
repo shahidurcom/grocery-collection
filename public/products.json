@@ -230,7 +230,7 @@
     {
         "id": 13,
         "name": "Black Tea",
-        "image": "img/tea/bold-black-tea.jpg",
+        "image": "/img/tea/bold-black-tea.jpg",
         "options": [
             {
                 "label": "250g",
@@ -249,7 +249,7 @@
     {
         "id": 14,
         "name": "Green Tea",
-        "image": "img/tea/green-tea.jpg",
+        "image": "/img/tea/green-tea.jpg",
         "options": [
             {
                 "label": "250g",
@@ -268,7 +268,7 @@
     {
         "id": 15,
         "name": "Masala Tea",
-        "image": "img/tea/special-sylotea-tea.jpg",
+        "image": "/img/tea/special-sylotea-tea.jpg",
         "options": [
             {
                 "label": "250g",
@@ -287,7 +287,7 @@
     {
         "id": 16,
         "name": "Cloves",
-        "image": "img/spices/cloves.jpg",
+        "image": "/img/spices/cloves.jpg",
         "options": [
             {
                 "label": "100g",
@@ -306,7 +306,7 @@
     {
         "id": 17,
         "name": "Cardamom",
-        "image": "img/spices/cardamom.jpg",
+        "image": "/img/spices/cardamom.jpg",
         "options": [
             {
                 "label": "100g",
@@ -325,7 +325,7 @@
     {
         "id": 18,
         "name": "Nutmeg",
-        "image": "img/spices/nutmeg.jpg",
+        "image": "/img/spices/nutmeg.jpg",
         "options": [
             {
                 "label": "100g",
@@ -344,7 +344,7 @@
     {
         "id": 19,
         "name": "Star Masala",
-        "image": "img/spices/star-masala.jpg",
+        "image": "/img/spices/star-masala.jpg",
         "options": [
             {
                 "label": "100g",
@@ -363,7 +363,7 @@
     {
         "id": 20,
         "name": "Mix Masala",
-        "image": "img/spices/mix-masala.jpg",
+        "image": "/img/spices/mix-masala.jpg",
         "options": [
             {
                 "label": "250g",
@@ -382,7 +382,7 @@
     {
         "id": 21,
         "name": "Cinnamon",
-        "image": "img/spices/cinnamon.jpg",
+        "image": "/img/spices/cinnamon.jpg",
         "options": [
             {
                 "label": "100g",
@@ -401,7 +401,7 @@
     {
         "id": 22,
         "name": "Almond",
-        "image": "img/nuts-and-others/almond.jpg",
+        "image": "/img/nuts-and-others/almond.jpg",
         "options": [
             {
                 "label": "250g",
@@ -420,7 +420,7 @@
     {
         "id": 23,
         "name": "Chia Seeds",
-        "image": "img/nuts-and-others/chia-seeds.jpg",
+        "image": "/img/nuts-and-others/chia-seeds.jpg",
         "options": [
             {
                 "label": "250g",
@@ -439,7 +439,7 @@
     {
         "id": 24,
         "name": "Cashew Nut",
-        "image": "img/nuts-and-others/cashew-nut.jpg",
+        "image": "/img/nuts-and-others/cashew-nut.jpg",
         "options": [
             {
                 "label": "250g",
@@ -458,7 +458,7 @@
     {
         "id": 25,
         "name": "Roasted Cashew Nuts",
-        "image": "img/nuts-and-others/roasted-cashew-nuts.jpg",
+        "image": "/img/nuts-and-others/roasted-cashew-nuts.jpg",
         "options": [
             {
                 "label": "250g",
@@ -477,7 +477,7 @@
     {
         "id": 26,
         "name": "Roasted Chinese Almonds",
-        "image": "img/nuts-and-others/roasted-chinese-almonds.jpg",
+        "image": "/img/nuts-and-others/roasted-chinese-almonds.jpg",
         "options": [
             {
                 "label": "250g",
@@ -496,7 +496,7 @@
     {
         "id": 27,
         "name": "Raw Chinese Almonds",
-        "image": "img/nuts-and-others/raw-chinese-almonds.jpg",
+        "image": "/img/nuts-and-others/raw-chinese-almonds.jpg",
         "options": [
             {
                 "label": "250g",
@@ -515,7 +515,7 @@
     {
         "id": 28,
         "name": "Pistachio Nuts",
-        "image": "img/nuts-and-others/pistachio-nuts.jpg",
+        "image": "/img/nuts-and-others/pistachio-nuts.jpg",
         "options": [
             {
                 "label": "250g",
@@ -534,7 +534,7 @@
     {
         "id": 29,
         "name": "Black Cumin Oil",
-        "image": "img/oil/black-cumin-oil.jpg",
+        "image": "/img/oil/black-cumin-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -553,7 +553,7 @@
     {
         "id": 30,
         "name": "Coconut Oil",
-        "image": "img/oil/coconut-oil.jpg",
+        "image": "/img/oil/coconut-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -572,7 +572,7 @@
     {
         "id": 31,
         "name": "Olive Oil",
-        "image": "img/oil/olive-oil.jpg",
+        "image": "/img/oil/olive-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -591,7 +591,7 @@
     {
         "id": 32,
         "name": "Linseed Oil",
-        "image": "img/oil/linseed-oil.jpg",
+        "image": "/img/oil/linseed-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -610,7 +610,7 @@
     {
         "id": 33,
         "name": "Ghani Broken Mustard Oil",
-        "image": "img/oil/ghani-broken-mustard-oil.jpg",
+        "image": "/img/oil/ghani-broken-mustard-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -629,7 +629,7 @@
     {
         "id": 34,
         "name": "Sesame Oil",
-        "image": "img/oil/sesame-oil.jpg",
+        "image": "/img/oil/sesame-oil.jpg",
         "options": [
             {
                 "label": "250ml",
@@ -648,7 +648,7 @@
     {
         "id": 35,
         "name": "Natural Chak Honey",
-        "image": "img/honey/natural-chak-honey.jpg",
+        "image": "/img/honey/natural-chak-honey.jpg",
         "options": [
             {
                 "label": "250g",
@@ -667,7 +667,7 @@
     {
         "id": 36,
         "name": "Mustard Flower Honey",
-        "image": "img/honey/mustard-flower-honey.jpg",
+        "image": "/img/honey/mustard-flower-honey.jpg",
         "options": [
             {
                 "label": "250g",
@@ -686,7 +686,7 @@
     {
         "id": 37,
         "name": "Lychee Flower Honey",
-        "image": "img/honey/lychee-flower-honey.jpg",
+        "image": "/img/honey/lychee-flower-honey.jpg",
         "options": [
             {
                 "label": "250g",
@@ -705,7 +705,7 @@
     {
         "id": 38,
         "name": "Black Cumin Flower Honey",
-        "image": "img/honey/black-cumin-flower-honey.jpg",
+        "image": "/img/honey/black-cumin-flower-honey.jpg",
         "options": [
             {
                 "label": "250g",
@@ -724,7 +724,7 @@
     {
         "id": 39,
         "name": "Red Sugar",
-        "image": "img/sugar-and-jaggery/eed-sugar.jpg",
+        "image": "/img/sugar-and-jaggery/eed-sugar.jpg",
         "options": [
             {
                 "label": "250g",
@@ -743,7 +743,7 @@
     {
         "id": 40,
         "name": "Date Molasses",
-        "image": "img/sugar-and-jaggery/date-molasses.jpg",
+        "image": "/img/sugar-and-jaggery/date-molasses.jpg",
         "options": [
             {
                 "label": "250g",
@@ -762,7 +762,7 @@
     {
         "id": 41,
         "name": "Gawa Ghee",
-        "image": "img/ghee/gawa-ghee.jpg",
+        "image": "/img/ghee/gawa-ghee.jpg",
         "options": [
             {
                 "label": "250g",
@@ -781,7 +781,7 @@
     {
         "id": 42,
         "name": "Cream Ghee",
-        "image": "img/ghee/cream-ghee.jpg",
+        "image": "/img/ghee/cream-ghee.jpg",
         "options": [
             {
                 "label": "250g",
@@ -800,7 +800,7 @@
     {
         "id": 43,
         "name": "Butter",
-        "image": "img/ghee/butter.jpg",
+        "image": "/img/ghee/butter.jpg",
         "options": [
             {
                 "label": "250g",
@@ -819,7 +819,7 @@
     {
         "id": 44,
         "name": "Ajwa Date",
-        "image": "img/dates/ajwa-date.jpg",
+        "image": "/img/dates/ajwa-date.jpg",
         "options": [
             {
                 "label": "250g",
@@ -838,7 +838,7 @@
     {
         "id": 45,
         "name": "Maryam Date",
-        "image": "img/dates/maryam.jpg",
+        "image": "/img/dates/maryam.jpg",
         "options": [
             {
                 "label": "250g",
@@ -857,7 +857,7 @@
     {
         "id": 46,
         "name": "Mabrum Date",
-        "image": "img/dates/mabrum.jpg",
+        "image": "/img/dates/mabrum.jpg",
         "options": [
             {
                 "label": "250g",
@@ -876,7 +876,7 @@
     {
         "id": 47,
         "name": "Kurma Date",
-        "image": "img/dates/kurma.jpg",
+        "image": "/img/dates/kurma.jpg",
         "options": [
             {
                 "label": "250g",
@@ -895,7 +895,7 @@
     {
         "id": 48,
         "name": "Date Palm",
-        "image": "img/dates/date-palm.jpg",
+        "image": "/img/dates/date-palm.jpg",
         "options": [
             {
                 "label": "250g",
@@ -914,7 +914,7 @@
     {
         "id": 49,
         "name": "Medjool Dates",
-        "image": "img/dates/premium-date.jpg",
+        "image": "/img/dates/premium-date.jpg",
         "options": [
             {
                 "label": "250g",
@@ -933,7 +933,7 @@
     {
         "id": 50,
         "name": "Basmati Rice (Long Grain)",
-        "image": "img/rice/basmati-rice-long-grain.jpg",
+        "image": "/img/rice/basmati-rice-long-grain.jpg",
         "options": [
             {
                 "label": "1kg",
@@ -952,7 +952,7 @@
     {
         "id": 51,
         "name": "Chinigura Rice",
-        "image": "img/rice/chinigura-rice.jpg",
+        "image": "/img/rice/chinigura-rice.jpg",
         "options": [
             {
                 "label": "1kg",
@@ -971,7 +971,7 @@
     {
         "id": 52,
         "name": "Katari Atop Rice",
-        "image": "img/rice/katari-atop-rice.jpg",
+        "image": "/img/rice/katari-atop-rice.jpg",
         "options": [
             {
                 "label": "1kg",

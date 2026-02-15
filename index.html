@@ -116,7 +116,7 @@
 
 			<!-- Grocery App Component -->
 			<div
-				class="glass-panel w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10"
+				class="glass-panel w-full max-w-4xl rounded-t-2xl shadow-2xl overflow-hidden animate-fade-in relative z-10"
 			>
 				<!-- Header -->
 				<header
@@ -184,50 +184,50 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- Grocery App Checkout Control -->
-				<div
-					class="sticky bottom-0 left-0 right-0 z-50 p-4 sm:p-6 bg-gray-500 backdrop-blur-md border-t border-gray-100 grid grid-cols-2 gap-4 items-center sm:flex sm:justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.15)] max-w-4xl mx-auto"
+			<!-- Grocery App Checkout Control: sticky to viewport bottom until its actual position -->
+			<div
+				class="sticky bottom-0 left-0 right-0 z-50 mt-0 w-full max-w-4xl mx-auto p-4 sm:p-6 bg-white/95 backdrop-blur-md border-t border-gray-200 rounded-b-xl grid grid-cols-2 gap-4 items-center sm:flex sm:justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.12)]"
+			>
+				<!-- Select All -->
+				<button
+					onclick="selectAll()"
+					class="justify-self-start text-sm font-medium text-gray-500 hover:text-green-700 bg-gray-100 hover:bg-green-50 px-3 py-2 rounded-lg transition-colors flex items-center gap-2"
 				>
-					<!-- Select All -->
-					<button
-						onclick="selectAll()"
-						class="justify-self-start text-sm font-medium text-gray-500 hover:text-green-700 bg-gray-100 hover:bg-green-50 px-3 py-2 rounded-lg transition-colors flex items-center gap-2"
+					<svg
+						class="w-4 h-4"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
 					>
-						<svg
-							class="w-4 h-4"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M5 13l4 4L19 7"
-							></path>
-						</svg>
-						Select All
-					</button>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M5 13l4 4L19 7"
+						></path>
+					</svg>
+					Select All
+				</button>
 
-					<!-- Total Amount -->
-					<div class="justify-self-end text-right sm:order-2 sm:mr-6">
-						<p class="text-xs text-gray-400 uppercase font-bold">
-							Total Amount
-						</p>
-						<div class="text-2xl font-bold text-green-700">
-							৳<span id="total">0</span>
-						</div>
+				<!-- Total Amount -->
+				<div class="justify-self-end text-right sm:order-2 sm:mr-6">
+					<p class="text-xs text-gray-400 uppercase font-bold">
+						Total Amount
+					</p>
+					<div class="text-2xl font-bold text-green-700">
+						৳<span id="total">0</span>
 					</div>
-
-					<!-- Checkout Button -->
-					<button
-						onclick="addToCart()"
-						class="col-span-2 w-full sm:col-span-1 sm:w-auto sm:order-3 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2"
-					>
-						<span>🛒</span> Checkout
-					</button>
 				</div>
+
+				<!-- Checkout Button -->
+				<button
+					onclick="addToCart()"
+					class="col-span-2 w-full sm:col-span-1 sm:w-auto sm:order-3 btn-transition bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2"
+				>
+					<span>🛒</span> Checkout
+				</button>
 			</div>
 		</div>
 

@@ -94,59 +94,49 @@
 		</div>
 		<!-- Spinner End -->
 
-		<!-- Navbar Start -->
-		<div class="container-fluid bg-white sticky-top">
-			<div class="container">
-				<nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
-					<a href="index.html" class="navbar-brand">
-						<img class="img-fluid" src="img/logo.png" alt="Logo" />
-					</a>
-					<button
-						type="button"
-						class="navbar-toggler ms-auto me-0"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarCollapse"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarCollapse">
-						<div class="navbar-nav ms-auto">
-							<a href="index.html" class="nav-item nav-link">Home</a>
-							<a href="about.html" class="nav-item nav-link">About</a>
-							<a href="contact.html" class="nav-item nav-link">Contact</a>
-							<div class="nav-item dropdown">
-								<a
-									href="#"
-									class="nav-link dropdown-toggle active"
-									data-bs-toggle="dropdown"
-									>Shop</a
-								>
-								<div class="dropdown-menu bg-light rounded-0 m-0">
-									<a href="tea.html" class="dropdown-item">🍵 Tea</a>
-									<a href="spices.html" class="dropdown-item">🌿 Spices</a>
-									<a href="nuts-and-others.html" class="dropdown-item"
-										>🥜 Nuts & Seeds</a
-									>
-									<a href="oil.html" class="dropdown-item">🫒 Oil</a>
-									<a href="honey.html" class="dropdown-item">🍯 Honey</a>
-									<a href="sugar-and-jaggery.html" class="dropdown-item"
-										>🍚 Sugar & Jaggery</a
-									>
-									<a href="ghee.html" class="dropdown-item">🧈 Ghee</a>
-									<a href="dates.html" class="dropdown-item">🌴 Dates</a>
-									<a href="rice.html" class="dropdown-item">🍚 Rice</a>
-								</div>
-							</div>
-						</div>
-						<div class="border-start ps-4 d-none d-lg-block">
-							<a href="https://wa.me/message/2JOFIELTGEQYK1"
-								>Order <i class="fa fa-shopping-cart"></i
-							></a>
-						</div>
-					</div>
-				</nav>
+		<!-- Navbar: custom classes only (no Bootstrap) -->
+		<nav class="site-nav" id="siteNav">
+			<div class="site-nav__inner">
+				<a class="site-nav__logo-wrap" href="index.html">
+					<img src="/img/logo.png" alt="SyloTea" class="site-nav__logo" />
+				</a>
+				<button class="site-nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNavMenu">
+					<span class="site-nav__toggle-bar"></span>
+					<span class="site-nav__toggle-bar"></span>
+					<span class="site-nav__toggle-bar"></span>
+				</button>
+				<div class="site-nav__panel" id="siteNavMenu">
+					<ul class="site-nav__list">
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="index.html">Home</a>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="about.html">About</a>
+						</li>
+						<li class="site-nav__item">
+							<a class="site-nav__link" href="contact.html">Contact</a>
+						</li>
+						<li class="site-nav__item site-nav__item--dropdown">
+							<button type="button" class="site-nav__link site-nav__dropdown-trigger text-green-600" aria-expanded="false" aria-haspopup="true">Shop</button>
+							<ul class="site-nav__dropdown-menu" role="menu">
+								<li><a class="site-nav__dropdown-link" href="tea.html">🍵 Tea</a></li>
+								<li><a class="site-nav__dropdown-link" href="spices.html">🌿 Spices</a></li>
+								<li><a class="site-nav__dropdown-link" href="nuts-and-others.html">🥜 Nuts & Seeds</a></li>
+								<li><a class="site-nav__dropdown-link" href="oil.html">🫒 Oil</a></li>
+								<li><a class="site-nav__dropdown-link" href="honey.html">🍯 Honey</a></li>
+								<li><a class="site-nav__dropdown-link" href="sugar-and-jaggery.html">🍚 Sugar & Jaggery</a></li>
+								<li><a class="site-nav__dropdown-link" href="ghee.html">🧈 Ghee</a></li>
+								<li><a class="site-nav__dropdown-link" href="dates.html">🌴 Dates</a></li>
+								<li><a class="site-nav__dropdown-link" href="rice.html">🍚 Rice</a></li>
+							</ul>
+						</li>
+						<li class="site-nav__item site-nav__item--order">
+							<a class="site-nav__link site-nav__link--order text-green-600" href="https://wa.me/message/2JOFIELTGEQYK1">Order <i class="fa fa-shopping-cart"></i></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
+		</nav>
 		<!-- Navbar End -->
 
 		<!-- Main Content Wrapper -->

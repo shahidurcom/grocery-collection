@@ -14,12 +14,35 @@
 	// Initiate the wowjs
 	new WOW().init();
 
-	// Sticky Navbar
+	// Site nav: scroll shadow
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 300) {
-			$(".sticky-top").addClass("shadow-sm").css("top", "0px");
+		if ($(this).scrollTop() > 20) {
+			$(".site-nav").addClass("is-scrolled");
 		} else {
-			$(".sticky-top").removeClass("shadow-sm").css("top", "-150px");
+			$(".site-nav").removeClass("is-scrolled");
+		}
+	});
+
+	// Site nav: mobile menu toggle
+	$(".site-nav__toggle").on("click", function () {
+		$("#siteNav").toggleClass("is-open");
+		$(this).attr("aria-expanded", $("#siteNav").hasClass("is-open"));
+	});
+
+	// Site nav: mobile dropdown (Shop) toggle
+	$(document).on("click", ".site-nav__dropdown-trigger", function (e) {
+		if (window.innerWidth < 992) {
+			e.preventDefault();
+			$(this).closest(".site-nav__item--dropdown").toggleClass("is-open");
+			$(this).attr("aria-expanded", $(this).closest(".site-nav__item--dropdown").hasClass("is-open"));
+		}
+	});
+
+	// Close mobile menu when clicking a non-dropdown link
+	$(".site-nav__link[href], .site-nav__dropdown-link").on("click", function () {
+		if (window.innerWidth < 992) {
+			$("#siteNav").removeClass("is-open");
+			$(".site-nav__item--dropdown").removeClass("is-open");
 		}
 	});
 

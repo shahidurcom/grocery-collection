@@ -26,16 +26,41 @@
     });
     
     
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+    // Back to top / back to bottom buttons
+    function updateScrollButtons() {
+        var st = $(window).scrollTop();
+        var winH = $(window).height();
+        var docH = $(document).height();
+        var atBottom = (st + winH) >= (docH - 50);
+
+        if (st > 300) {
+            $('.back-to-top').css('display', 'flex').fadeIn(200);
         } else {
-            $('.back-to-top').fadeOut('slow');
+            $('.back-to-top').fadeOut(200, function () {
+                $(this).css('display', 'none');
+            });
         }
+
+        if (!atBottom && docH > winH + 100) {
+            $('.back-to-bottom').css('display', 'flex').fadeIn(200);
+        } else {
+            $('.back-to-bottom').fadeOut(200, function () {
+                $(this).css('display', 'none');
+            });
+        }
+    }
+    $(window).scroll(function () {
+        updateScrollButtons();
     });
+    updateScrollButtons();
+
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 800, 'easeInOutExpo');
+        return false;
+    });
+    $('.back-to-bottom').click(function () {
+        var bottom = $(document).height() - $(window).height();
+        $('html, body').animate({ scrollTop: bottom }, 800, 'easeInOutExpo');
         return false;
     });
 

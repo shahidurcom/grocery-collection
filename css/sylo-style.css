@@ -6,13 +6,72 @@
     --dark: #252C30;
 }
 
-.back-to-top {
+/* Scroll buttons container: down (left) and up (right) */
+.scroll-buttons {
     position: fixed;
-    display: none;
+    right: 30px;
+    bottom: 100px;
+    z-index: 99;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+    align-items: center;
+}
+
+.back-to-top,
+.back-to-bottom {
+    position: fixed;
     right: 30px;
     bottom: 30px;
     z-index: 99;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 12px rgba(19, 161, 79, 0.35);
+    transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+
+.scroll-buttons .back-to-top,
+.scroll-buttons .back-to-bottom {
+    position: static;
+    right: auto;
+    bottom: auto;
+}
+
+.scroll-buttons .back-to-top.visible,
+.scroll-buttons .back-to-bottom.visible {
+    display: flex !important;
+}
+
+.back-to-top:hover,
+.back-to-bottom:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(19, 161, 79, 0.45);
+}
+
+.back-to-top:active,
+.back-to-bottom:active {
+    transform: scale(0.96);
+}
+
+.back-to-top i,
+.back-to-bottom i {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.back-to-top {
+    /* right is set by container */
+}
+
+.back-to-bottom {
+    /* left of back-to-top via flex */
+}
+
 
 .fw-medium {
     font-weight: 600;

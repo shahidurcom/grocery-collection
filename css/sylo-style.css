@@ -72,6 +72,12 @@
     /* left of back-to-top via flex */
 }
 
+@media (max-width: 991.98px) {
+    .scroll-buttons {
+        display: none !important;
+    }
+}
+
 
 .fw-medium {
     font-weight: 600;
